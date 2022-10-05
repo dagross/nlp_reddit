@@ -2,7 +2,12 @@
 
 ### Problem Statement
 
+Our marketing company is looking for a way to improve effectiveness of advertising campaignes running on Reddit. For that purpose stakeholders would like to know is there a significant difference on how people adress man and woman. If such difference exist, this could greatly improve targeting algorithms. As a data scientist at this company, I have been tasked to solve this issue by building a classifying models and find keywords, that are specific for each audince if there are so. Measure of success of this project will be resulting f1 score, because both classes are equaily matter that should be higher than 40% of baseline accuracy. This model will be evaluated using accuracy rate. Resulting score should be as high as possible, but not lower than 70, which is 20 points higher than baseline accuracy.
+
+
 Our marketing company is looking for a way to improve effectiveness of advertising campaignes running on Reddit. For that purpose stakeholders would like to know is there a significant difference on how people adress man and woman. If such difference exist, this could greatly improve targeting algorithms. As a data scientist at this company, I have been tasked to solve this issue by building a classifying models and find keywords, that are specific for each audince if there are so. Measure of success of this project will be resulting accuracy score that should be higher than 40% of baseline accuracy. This model will be evaluated using accuracy rate. Resulting score should be as high as possible, but not lower than 70, which is 20 points higher than baseline accuracy.
+
+F1 Score might be a better measure to use if we need to seek a balance between Precision and Recall AND there is an uneven class distribution (large number of Actual Negatives).
 
 threshhold on model performance, ceiling, getting stuck
 
