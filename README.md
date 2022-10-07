@@ -6,7 +6,7 @@ Our marketing company is looking for a way to improve effectiveness of advertisi
 
 
 ## Brief Summary of Analysis and Interpretations
-For solving the stated problem, I've decided to parse and download data from two subreddits: r/AskWoman and r/AskMan, that complitely satisfies audiency requirements. After EDA and basic cleaning using RegExp, I've used SpaCy for lemmetizing, finding StopWords and cleaning auxiliary words.
+For solving the stated problem, I've parsed and downloaded approx. 2000 submissions from each of two subreddits: r/AskWoman and r/AskMan, that complitely satisfies audiency requirements. After EDA and basic cleaning using RegExp, I've used SpaCy for lemmetizing, finding StopWords and cleaning auxiliary words.
 
 I've started building models. Instead of two models, I've tried five, to be sure, that results I am getting, are not caused by incorrect classification approach. But since all chosen variety of models show similar effectiveness, we can say with confidence, that results are caused by data. 
 
@@ -23,7 +23,7 @@ I've started building models. Instead of two models, I've tried five, to be sure
 First few iterations of modelling gave extremely overfitted scores, for each model (>0.95 for all train scores). That could been caused by an amount of features. Tuning CountVectorizer hyperparameters has solved that problem. As a result best scores were shown by  AdaBoost model. There are still some signes of overfitting, but tuning 5 models with a a dosen hyperparameters takes a lot of time, so for the purpose of effective work, I've decided to stop on approppriate scores.
 Overall we can say, that AdaBoost model shows the best results at each type of scores.
 
-First interesting thing is that the best modeling scores were shown for variations of ngrams (1,2), that means that words order have a great matter for this data analysis.
+First interesting thing is that the best modeling scores were shown for variations of ngrams (1,2), that means that words order  matters for this data analysis.
 Second interesting thing I've spotted is that of 4100 submissions, which consist of more than 120000 words, there are only 5964 unique words for AskMan and 5097 unique words for AskWoman.
 
 Here is typical resulting ROC curve:
