@@ -31,7 +31,7 @@ Here is typical resulting ROC curve:
 Datasets are pretty overlapped. ROC-AUC is within a range 0.6-0.7 for all models. Differences between classes definentely exists, but is not very significant or models are not able to catch a lot of signal among noice.
 
 
-Side test
+<dev>Side test<dev>
 To get some additional data insights and reveal possible patterns I've conducted same modeling process on commentaries in those subreddits. For that purpose I've downloaded amount of comments equal to amount of submissions (~ 2000 for each /r). In the resulting dataset, baseline score was <dev>0.544444<dev>. Here are the results of the best models:
 
 |Model|Train Score|Test Score|
