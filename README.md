@@ -18,17 +18,18 @@ I've started building models. Instead of two models, I've tried five, to be sure
 | Naive Bayes |  0.6587615283267457 | 0.5903257650542941 |0.5982575024201355|
 | Decision Tree | 0.66600790513834 | 0.5972359328726555 |0.46174142480211083|
 | RandomForest | 0.6831357048748353 | 0.6209279368213229 |0.5923566878980892|
-|**AdaBoost** |**0.6930171277997365** | **0.631786771964462** |**0.5932388222464559**|
+|<dev>AdaBoost<dev> |<dev>0.6930171277997365<dev> | <dev>0.631786771964462<dev> |<dev>0.5932388222464559<dev>|
 
+First few iterations of modelling gave extremely overfitted scores, for each model (>0.95 for all train scores). That could been caused by an amount of features. Tuning CountVectorizer hyperparameters has solved that problem. As a result best scores were shown by  AdaBoost model. There are still some signes of overfitting, but tuning 5 models with a a dosen hyperparameters takes a lot of time, so for the purpose of effective work, I've decided to stop on approppriate scores.
+Overall we can say, that AdaBoost model shows the best results at each type of scores.
 
-## Result showed that  best results were shown for variations of ngrams (1,2)
-Conclusions:
+First interesting thing is that the best modeling scores were shown for variations of ngrams (1,2), that means that words order have a great matter for this data analysis.
+Second interesting thing I've spotted is that of 4100 submissions, which consist of more than 120000 words, there are only 5964 unique words for AskMan and 5097 unique words for AskWoman.
+
 Here is typical resulting ROC curve:
  ![""](./resources/ROC.png)
+Datasets are pretty overlapped. ROC-AUC is within a range 0.6-0.7 for all models. Differences between classes definentely exists, but is not very significant or models are not able to catch a lot of signal among noice.
 
-- Datasets are pretty overlapped. ROC-AUC is within a range 0.6-0.7 for all models. Differences between datasets are not that significant or models are not able to catch a lot of signal among noice, however there is definetely a pattern.
-
-Overall we can say, that AdaBoost model shows the best results at each type of scores.
 
 Side test
 To get some additional data insights and reveal possible patterns I've conducted same modeling process on commentaries in those subreddits. For that purpose I've downloaded amount of comments equal to amount of submissions (~ 2000 for each /r). In the resulting dataset, baseline score was <dev>0.544444<dev>. Here are the results of the best models:
